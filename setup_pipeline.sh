@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo chmod 666 /var/run/docker.sock
-pip install cwltool==3.0.20200530110633
+pip3 install cwltool==3.0.20200530110633
 mkdir data/
 wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11654257
 
