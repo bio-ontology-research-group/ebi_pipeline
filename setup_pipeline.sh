@@ -14,8 +14,8 @@ wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11
 git clone --depth=50 https://github.com/EBI-Metagenomics/ebi-metagenomics-cwl.git ebi-metagenomics-cwl
 git clone -b rebuild_dockers https://github.com/EBI-Metagenomics/pipeline-v5
 
-
-#./download_dbs.sh
+chmod +x pipeline-v5/download_dbs.sh
+#./pipeline-v5/download_dbs.sh
 
 cp ./assembly.yml pipeline-v5/
 cp ./wgs.yml pipeline-v5/
