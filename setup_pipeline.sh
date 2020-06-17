@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo chmod 666 /var/run/docker.sock
+pip3 install docker
+chmod 666 /var/run/docker.sock
 pip3 install cwltool==3.0.20200530110633
 mkdir data/
 
