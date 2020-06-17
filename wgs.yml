@@ -191,4 +191,4 @@ qc_min_length: 100
 single_reads:  
   format: edam:format_1930
   class: File
-  path: ../data/SRR11654257_1.fastq  
+  path: ../data/SRR11654257.fastq  
