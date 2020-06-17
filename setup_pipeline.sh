@@ -10,6 +10,7 @@ wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.7/sratoolkit.2.10.7-ubuntu6
 tar xzvf sratoolkit.2.10.7-ubuntu64.tar.gz
 cd data/
 wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11654257
+fastq-dump SRR11654257
 cd ..
 
 git clone --depth=50 https://github.com/EBI-Metagenomics/ebi-metagenomics-cwl.git ebi-metagenomics-cwl
