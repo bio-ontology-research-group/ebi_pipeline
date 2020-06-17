@@ -8,14 +8,17 @@ mkdir data/
 sudo apt-get --quiet install --yes libxml-libxml-perl
 wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.7/sratoolkit.2.10.7-ubuntu64.tar.gz
 tar xzvf sratoolkit.2.10.7-ubuntu64.tar.gz
+cd data/
 wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11654257
-
+cd ..
 
 git clone --depth=50 https://github.com/EBI-Metagenomics/ebi-metagenomics-cwl.git ebi-metagenomics-cwl
 git clone -b rebuild_dockers https://github.com/EBI-Metagenomics/pipeline-v5
 
 chmod +x pipeline-v5/download_dbs.sh
-./pipeline-v5/download_dbs.sh
+cd pipeline-v5/
+./download_dbs.sh
+cd ..
 
 cp ./assembly.yml pipeline-v5/
 cp ./wgs.yml pipeline-v5/
