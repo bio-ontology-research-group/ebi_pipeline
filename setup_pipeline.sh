@@ -15,7 +15,7 @@ git clone --depth=50 https://github.com/EBI-Metagenomics/ebi-metagenomics-cwl.gi
 git clone -b rebuild_dockers https://github.com/EBI-Metagenomics/pipeline-v5
 
 chmod +x pipeline-v5/download_dbs.sh
-#./pipeline-v5/download_dbs.sh
+./pipeline-v5/download_dbs.sh
 
 cp ./assembly.yml pipeline-v5/
 cp ./wgs.yml pipeline-v5/
