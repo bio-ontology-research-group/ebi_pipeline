@@ -8,10 +8,12 @@ mkdir data/
 
 
 sudo apt-get --quiet install --yes libxml-libxml-perl
-wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.7/sratoolkit.2.10.7-ubuntu64.tar.gz
-tar xzvf sratoolkit.2.10.7-ubuntu64.tar.gz
+#wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.7/sratoolkit.2.10.7-ubuntu64.tar.gz
+#tar xzvf sratoolkit.2.10.7-ubuntu64.tar.gz
+sudo apt-get install sra-toolkit
 cd data/
 wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11654257
+echo "Now Extracting SRR File, This may take some time"
 fastq-dump SRR11654257
 cd ..
 
