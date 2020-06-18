@@ -14,7 +14,7 @@ sudo apt-get install sra-toolkit
 cd data/
 wget ./data/ https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRR/011381/SRR11654257
 echo "Now Extracting SRR File, This may take some time"
-fastq-dump SRR11654257
+fastq-dump --gzip SRR11654257
 cd ..
 
 git clone --depth=50 https://github.com/EBI-Metagenomics/ebi-metagenomics-cwl.git ebi-metagenomics-cwl
