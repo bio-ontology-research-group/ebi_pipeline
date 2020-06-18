@@ -25,6 +25,7 @@ cd pipeline-v5/
 ./download_dbs.sh
 cd ..
 
+chmod +x run.sh
 cp ./assembly.yml pipeline-v5/
 cp ./wgs.yml pipeline-v5/
 cp ./run.sh pipeline-v5/
