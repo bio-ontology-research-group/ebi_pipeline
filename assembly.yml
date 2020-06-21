@@ -226,4 +226,4 @@ clusters_glossary:
 contigs:  
   format: edam:format_1929
   class: File
-  path: ../data/RMG_41.fa
+  path: ../data/RMG_41.fa.gz
