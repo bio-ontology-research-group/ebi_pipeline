@@ -184,7 +184,7 @@ InterProScan_outputFormat:
   - TSV
 InterProScan_databases:
   class: Directory
-  path: .//interproscan-5.36-75.0/data
+  path: .//interproscan-5.44-79.0/data
 ips_header: 'protein_accession	sequence_md5_digest	sequence_length	analysis	signature_accession	signature_description	start_location	stop_location	score	status	date	accession	description	go	pathways_annotations'
 contig_min_length: 500
 
