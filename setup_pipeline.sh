@@ -26,8 +26,9 @@ cd pipeline-v5/
 cd ..
 
 chmod +x run.sh
-cp ./assembly.yml pipeline-v5/
-cp ./wgs.yml pipeline-v5/
-cp ./run.sh pipeline-v5/
+mv ./assembly.yml pipeline-v5/
+mv ./wgs.yml pipeline-v5/
+mv ./run.sh pipeline-v5/
+mv RMG.fa.gz data/
 
 exec bash
