@@ -22,7 +22,7 @@ git clone -b rebuild_dockers https://github.com/EBI-Metagenomics/pipeline-v5
 
 chmod +x pipeline-v5/download_dbs.sh
 cd pipeline-v5/
-./download_dbs.sh
+bash download_dbs.sh -a True -m True -w True
 cd ..
 
 chmod +x run_raw_single.sh
