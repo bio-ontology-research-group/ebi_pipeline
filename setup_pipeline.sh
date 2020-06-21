@@ -25,10 +25,12 @@ cd pipeline-v5/
 ./download_dbs.sh
 cd ..
 
-chmod +x run.sh
+chmod +x run_raw_single.sh
+chmod +x run_assembly.sh
 mv ./assembly.yml pipeline-v5/
 mv ./wgs.yml pipeline-v5/
-mv ./run.sh pipeline-v5/
+mv ./run_raw_single.sh pipeline-v5/
+mv ./run_assembly.sh pipeline-v5/
 mv RMG_41.fa.gz data/
 
 exec bash
