@@ -135,7 +135,7 @@ rfam_model_clans:
   checksum: 4dffaadeaac92821c19bd0e5a152f370
 
 
-other_ncRNA_models:
+other_ncrna_models:
   - 'alpha_tmRNA.RF01849'
   - 'Bacteria_large_SRP.RF01854'
   - 'beta_tmRNA.RF01850'
