@@ -29,6 +29,6 @@ chmod +x run.sh
 mv ./assembly.yml pipeline-v5/
 mv ./wgs.yml pipeline-v5/
 mv ./run.sh pipeline-v5/
-mv RMG.fa.gz data/
+mv RMG_41.fa.gz data/
 
 exec bash
