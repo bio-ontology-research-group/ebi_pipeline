@@ -1,0 +1,58 @@
+#!/usr/bin/env cwl-runner
+cwl:tool: emg-pipeline-v3-paired.cwl
+run_id: ERR770958
+forward_reads:
+  path: /hps/nobackup/production/metagenomics/CWL/data/ERP009703/raw/ERR770958_1.fastq.gz
+  class: File
+  format: edam:format_1930  # FASTQ
+reverse_reads:
+  path: /hps/nobackup/production/metagenomics/CWL/data/ERP009703/raw/ERR770958_2.fastq.gz
+  class: File
+  format: edam:format_1930  # FASTQ
+fraggenescan_model:
+  main:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/illumina_5 
+  prob_forward:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/gene
+  prob_backward:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/rgene
+  prob_noncoding:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/noncoding
+  prob_start:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start
+  prob_stop:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop
+  prob_start1:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start1
+  prob_stop1:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop1
+  pwm_dist:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/pwm
+16S_model:
+  class: File
+  path: /hps/nobackup/production/metagenomics/production-scripts/current/mgportal/analysis-pipeline/python/tools/RNASelector-1.0/model-data/lib-hmmer31b1/16s_all.hmm
+  format: edam:format_1370
+5S_model:
+  class: File
+  path: /hps/nobackup/production/metagenomics/production-scripts/current/mgportal/analysis-pipeline/python/tools/RNASelector-1.0/model-data/lib-hmmer31b1/5s_all.hmm
+  format: edam:format_1370
+23S_model:
+  class: File
+  path: /hps/nobackup/production/metagenomics/production-scripts/current/mgportal/analysis-pipeline/python/tools/RNASelector-1.0/model-data/lib-hmmer31b1/23s_all.hmm
+  format: edam:format_1370
+tRNA_model:
+  class: File
+  path: /hps/nobackup/production/metagenomics/production-scripts/current/mgportal/analysis-pipeline/python/tools/RNASelector-1.0/model-data/tRNA/tRNA.hmm
+  format: edam:format_1370
+go_summary_config:
+  class: File
+  path: /hps/nobackup/production/metagenomics/production-scripts/current/mgportal/analysis-pipeline/python/tools/go_summary_generator/config/go_summary-config.json
