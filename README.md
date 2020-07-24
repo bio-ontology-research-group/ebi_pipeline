@@ -12,7 +12,7 @@ https://www.ebi.ac.uk/metagenomics/pipelines/4.0
 
 ## Setting up 
 
-1. First install all the external tools (see [GettingExternTools](GettingExternTools.md)) under `externaltools/`
+1. First install all the external tools (see [GettingExternalTools](GettingExternalTools.md)) under `externaltools/`
 
 2. Setup all the databases under `ref-dbs/`
 
