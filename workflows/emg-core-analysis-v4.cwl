@@ -99,9 +99,9 @@ outputs:
     outputSource: functional_analysis/functional_annotations
 
   #Taxonomic visualisation step
-  ssu_otu_visualization:
-    type: File
-    outputSource: visualize_otu_counts/otu_visualization 
+  # ssu_otu_visualization:
+  #   type: File
+  #   outputSource: visualize_otu_counts/otu_visualization 
 
   ssu_otu_counts_hdf5:
     type: File
