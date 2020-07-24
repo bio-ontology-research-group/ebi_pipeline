@@ -24,7 +24,7 @@ inputs:
     inputBinding:
       prefix: --config
 
-baseCommand: go_summary_pipeline-1.0.py
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/GO-slim/go_summary_pipeline-1.0.py
 
 arguments:
   - valueFrom: go-summary

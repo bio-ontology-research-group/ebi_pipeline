@@ -28,7 +28,7 @@ inputs:
     inputBinding:
       prefix: --label
 
-baseCommand: mapseq2biom.pl
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/utils/mapseq2biom.pl
 
 arguments:
   - valueFrom: $(inputs.query.basename).tsv

@@ -39,7 +39,7 @@ inputs:
       prefix: --replace
       valueFrom: "$(self.find):$(self.replace)"
 
-baseCommand: [ esl-reformat ]
+baseCommand: [ /home/kibriyam/workpipelines/ebi_pipeline/externaltools/infernal-1.1.2/bin/esl-reformat ]
 
 arguments:
   - valueFrom: fasta

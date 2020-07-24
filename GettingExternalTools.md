@@ -5,7 +5,7 @@ Get the following tools required by this pipeline as follows:
 $ ## Get Trimmomatic v0.35
 $ wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.35.zip 
 $ 
-$ ## Get BioPython v1.76
+$ ## Get BioPython v1.65
 $ pip2.7 install BioPython==1.65
 $ 
 $ ## Get Infernal v1.1.2
@@ -27,6 +27,12 @@ $
 $ ## Get SeqPrep v1.2
 $ wget https://github.com/jstjohn/SeqPrep/archive/v1.2.zip 
 $ mv v1.2.zip SeqPrep_v1.2.zip 
+$ 
+$ ## Get biom-format
+$ pip2.7 install numpy
+$ pip2.7 install Cython
+$ pip2.7 install biom-format==2.1.7
+$ pip2.7 install h5py
 $ 
 
 ## ADDITIONAL TOOLS NEEDED

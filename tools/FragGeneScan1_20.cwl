@@ -13,7 +13,7 @@ doc: |
       Version 1.20 can be downloaded here:
       https://sourceforge.net/projects/fraggenescan/files/
 
-baseCommand: FragGeneScan
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/FragGeneScan-1.20/FragGeneScan
 
 requirements:
   ResourceRequirement:

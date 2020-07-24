@@ -40,7 +40,7 @@ inputs:
       itemSeparator: ','
       prefix: --applications
 
-baseCommand: interproscan.sh
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/interproscan-5.25-64.0/interproscan.sh
 
 arguments:
  - valueFrom: $(inputs.proteinFile.nameroot).i5_annotations

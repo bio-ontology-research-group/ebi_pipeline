@@ -39,7 +39,7 @@ inputs:
     inputBinding:
       prefix: -C
 
-baseCommand: [ esl-sfetch ]
+baseCommand: [ /home/kibriyam/workpipelines/ebi_pipeline/externaltools/infernal-1.1.2/bin/esl-sfetch ]
 
 stdout: $(inputs.indexed_sequences.nameroot)_$(inputs.names.nameroot).fasta
 

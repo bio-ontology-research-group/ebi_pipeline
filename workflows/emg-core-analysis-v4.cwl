@@ -251,11 +251,12 @@ steps:
        query: classify_SSUs/classifications
     out: [ otu_counts, krona_otu_counts ]
 
-  visualize_otu_counts:
-    run: ../tools/krona.cwl
-    in:
-      otu_counts: convert_classifications_to_otu_counts/krona_otu_counts
-    out: [ otu_visualization ]
+  # ASHRAF: disable krona for now! 
+  # visualize_otu_counts:
+  #   run: ../tools/krona.cwl
+  #   in:
+  #     otu_counts: convert_classifications_to_otu_counts/krona_otu_counts
+  #   out: [ otu_visualization ]
 
   convert_otu_counts_to_hdf5:
     run: ../tools/biom-convert.cwl

@@ -36,7 +36,7 @@ inputs:
     inputBinding:
       position: 3
 
-baseCommand: mapseq
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/mapseq-1.2.2/mapseq
 
 arguments:
  - valueFrom: "4"  # $(runtime.cores)
