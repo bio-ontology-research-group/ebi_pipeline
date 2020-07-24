@@ -33,7 +33,7 @@ inputs:
       prefix: --clanin
     doc: Not all models provided need to be a member of a clan
 
-baseCommand: cmsearch-deoverlap.pl
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/cmsearch_deoverlap-0.01/cmsearch-deoverlap.pl
 
 outputs:
   deoverlapped_matches:

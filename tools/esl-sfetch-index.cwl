@@ -24,7 +24,7 @@ inputs:
       valueFrom: $(self.basename)
     format: edam:format_1929  # FASTA
 
-baseCommand: [ esl-sfetch, --index ]
+baseCommand: [ /home/kibriyam/workpipelines/ebi_pipeline/externaltools/infernal-1.1.2/bin/esl-sfetch, --index ]
 
 outputs:
   sequences_with_index:

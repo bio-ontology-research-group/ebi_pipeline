@@ -49,7 +49,7 @@ inputs:
     inputBinding:
       prefix: "-m"
 
-baseCommand: [ MGRAST_base.py ]
+baseCommand: [ /home/kibriyam/workpipelines/ebi_pipeline/externaltools/qc-stats/MGRAST_base.py ]
 
 outputs:
   summary_out:

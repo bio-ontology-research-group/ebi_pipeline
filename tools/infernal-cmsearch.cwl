@@ -71,7 +71,7 @@ inputs:
     inputBinding:
       prefix: --cut_ga
 
-baseCommand: cmsearch
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/infernal-1.1.2/bin/cmsearch
 
 arguments:
   - valueFrom: matches.tbl

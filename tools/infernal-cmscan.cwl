@@ -85,7 +85,7 @@ inputs:
     inputBinding:
       prefix: --oskip
  
-baseCommand: cmscan
+baseCommand: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/infernal-1.1.2/bin/cmscan
 
 arguments:
   - valueFrom: '2'

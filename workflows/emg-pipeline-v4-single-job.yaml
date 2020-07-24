@@ -1,0 +1,126 @@
+#!/usr/bin/env cwl-runner
+##cwl:tool: emg-assembly.cwl
+sequencing_run_id: ERR770958
+reads:
+  path: ../input-data/SRR8568048.fastq.gz 
+  class: File
+  format: edam:format_1930  # FASTQ
+ncRNA_ribosomal_models:
+  - class: File
+    path: ../ref-dbs/ribosomal/RF00002.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF00177.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF01959.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF01960.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02540.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02541.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02542.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02543.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02546.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02547.cm
+  - class: File
+    path: ../ref-dbs/ribosomal/RF02542.cm
+ncRNA_ribosomal_model_clans:
+    class: File
+    path: ../ref-dbs/ribosomal/ribo.claninfo
+fraggenescan_model:
+  main:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/complete
+  prob_forward:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/gene
+  prob_backward:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/rgene
+  prob_noncoding:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/noncoding
+  prob_start:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start
+  prob_stop:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop
+  prob_start1:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start1
+  prob_stop1:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop1
+  pwm_dist:
+    class: File
+    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/pwm
+mapseq_ref:  # downloaded from https://www.arb-silva.de/fileadmin/silva_databases/qiime/Silva_128_release.tgz
+  format: edam:format_1929
+  class: File
+  path: ../ref-dbs/SILVA_128_QIIME_release/rep_set/rep_set_all/99/99_otus.fasta
+        ##/hps/nobackup/production/metagenomics/CWL/data/libraries/SILVA/99_otus.fasta
+  secondaryFiles:
+    - class: File
+      path: ../ref-dbs/silva_ssu/99_otus.fasta.mscluster  ##UGLY HACK, renamed -->  SSU.fasta.mscluster 
+         ##don't know which one is this, no .mscluster in ../ref-dbs/SILVA_128_QIIME_release/rep_set/rep_set_all/99/ 
+        ##/hps/nobackup/production/metagenomics/CWL/data/libraries/SILVA/99_otus.fasta.mscluster
+mapseq_taxonomy:
+  class: File
+  path: ../ref-dbs/SILVA_128_QIIME_release/taxonomy/taxonomy_all/99/consensus_taxonomy_7_levels.txt ##multiple versions I chose the highet nubmer 99
+    ##/hps/nobackup/production/metagenomics/CWL/data/libraries/SILVA/consensus_taxonomy_7_levels.txt
+mapseq_taxonomy_otu_table:
+  class: File
+  path: ../ref-dbs/SILVA_128_QIIME_release/trees/99/99_otus.tre  ## don't know which file to use here??
+  ##../ref-dbs/SILVA_128_QIIME_release/taxonomy/taxonomy_all/99/majority_taxonomy_7_levels.txt 
+ncRNA_other_models:
+  - class: File
+    path: ../ref-dbs/other/alpha_tmRNA.cm    
+  - class: File
+    path: ../ref-dbs/other/Plant_SRP.cm
+  - class: File
+    path: ../ref-dbs/other/Archaea_SRP.cm     
+  - class: File
+    path: ../ref-dbs/other/Protozoa_SRP.cm
+  - class: File
+    path: ../ref-dbs/other/Bacteria_large_SRP.cm  
+  - class: File
+    path: ../ref-dbs/other/RNase_MRP.cm
+  - class: File
+    path: ../ref-dbs/other/Bacteria_small_SRP.cm  
+  - class: File
+    path: ../ref-dbs/other/RNaseP_arch.cm
+  - class: File
+    path: ../ref-dbs/other/beta_tmRNA.cm    
+  - class: File
+    path: ../ref-dbs/other/RNaseP_bact_a.cm
+  - class: File
+    path: ../ref-dbs/other/cyano_tmRNA.cm     
+  - class: File
+    path: ../ref-dbs/other/RNaseP_bact_b.cm
+  - class: File
+    path: ../ref-dbs/other/Dictyostelium_SRP.cm   
+  - class: File
+    path: ../ref-dbs/other/RNase_P.cm
+  - class: File
+    path: ../ref-dbs/other/Fungi_SRP.cm     
+  - class: File
+    path: ../ref-dbs/other/RNaseP_nuc.cm
+  - class: File
+    path: ../ref-dbs/other/Metazoa_SRP.cm     
+  - class: File
+    path: ../ref-dbs/other/tmRNA.cm
+  - class: File
+    path: ../ref-dbs/other/mt-tmRNA.cm      
+  - class: File
+    path: ../ref-dbs/other/tRNA.cm
+ncRNA_other_model_clans:
+    class: File
+    path: ../ref-dbs/other/other.claninfo
+go_summary_config:
+    class: File
+    path: tools/GO-slim/go_summary-config.json

@@ -23,6 +23,9 @@ requirements:
     - $import: trimmomatic-max_info.yaml
  InlineJavascriptRequirement: {}
  ShellCommandRequirement: {}
+ EnvVarRequirement:
+   envDef:
+     CLASSPATH: "/home/kibriyam/workpipelines/ebi_pipeline/externaltools/Trimmomatic-0.35/trimmomatic-0.35.jar"
 
 # hints:
 #  - $import: trimmomatic-docker.yml

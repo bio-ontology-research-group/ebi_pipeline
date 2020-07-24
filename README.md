@@ -10,6 +10,15 @@ https://www.ebi.ac.uk/metagenomics/pipelines/3.0
 OR
 https://www.ebi.ac.uk/metagenomics/pipelines/4.0
 
+## Setting up 
+
+1. First install all the external tools (see [GettingExternTools](GettingExternTools.md)) under `externaltools/`
+
+2. Setup all the databases under `ref-dbs/`
+
+3. Then run the following (setting of path maynot be needed)
+
+
 ## How to run our CWL files?
 
 1. Install the cwlref-runner as described here:
@@ -26,7 +35,12 @@ https://github.com/common-workflow-language/cwltool
 6. Run the command line tool/workflow, specifying the path if the tools are not
    installed to /usr/bin or /usr/local/bin
 ```
-  $ PATH=~/my/FragGeneScan:~/my/InterProScan:${PATH} cwltool \
-      --preserve-environment PATH workflows/emg-pipeline-v3.cwl \
-      workflows/emg-pipeline-v3-example-job.yaml
+##$ PATH=~/my/FragGeneScan:~/my/InterProScan:${PATH} cwltool \
+##    --preserve-environment PATH workflows/emg-pipeline-v3.cwl \
+##    workflows/emg-pipeline-v3-example-job.yaml
+
+## run with
+$ cd output
+$ cwltool ../workflows/emg-pipeline-v4-single.cwl ../workflows/emg-pipeline-v4-single-job.yaml
+
 ```
