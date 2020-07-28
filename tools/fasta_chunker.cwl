@@ -34,7 +34,7 @@ arguments:
           if len(currentSequences) == $(inputs.chunk_size):
               fileName = currentSequences[0].id + "_" + \\
                              currentSequences[-1].id + ".fasta"
-              for char in [ "/", " ", ":" ]:
+              for char in [ "/", " ", ":", "=", "+" ]:
                   fileName = fileName.replace(char, "_")
               SeqIO.write(currentSequences, "$(runtime.outdir)/"+fileName, "fasta")
               currentSequences = []
@@ -43,8 +43,9 @@ arguments:
       if len(currentSequences) > 0:
           fileName = currentSequences[0].id + "_" + \\
                          currentSequences[-1].id + ".fasta"
-          for char in [ "/", " ", ":" ]:
+          for char in [ "/", " ", ":", "=", "+"]:
               fileName = fileName.replace(char, "_")
+          print "writing file", fileName
           SeqIO.write(currentSequences, "$(runtime.outdir)/"+fileName, "fasta")
 
 outputs:

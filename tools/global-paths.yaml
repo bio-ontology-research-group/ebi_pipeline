@@ -1,0 +1,13 @@
+## All external tool commands specified here, in one file
+type: record 
+name: globalpaths
+fields:
+  - name: trimmomaticjarfile
+    type: string
+    value: /home/kibriyam/workpipelines/ebi_pipeline/externaltools/Trimmomatic-0.35/trimmomatic-0.35.jar
+    ##doc: |
+    ##  The jar full path of the Trimmomatic's jar file. 
+  - name: esl_sftech_path
+    type: File
+
+

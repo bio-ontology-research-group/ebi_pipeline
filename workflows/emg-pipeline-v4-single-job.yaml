@@ -34,31 +34,31 @@ ncRNA_ribosomal_model_clans:
 fraggenescan_model:
   main:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/complete
+    path: ../externaltools/FragGeneScan-1.20/train/complete
   prob_forward:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/gene
+    path: ../externaltools/FragGeneScan-1.20/train/gene
   prob_backward:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/rgene
+    path: ../externaltools/FragGeneScan-1.20/train/rgene
   prob_noncoding:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/noncoding
+    path: ../externaltools/FragGeneScan-1.20/train/noncoding
   prob_start:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start
+    path: ../externaltools/FragGeneScan-1.20/train/start
   prob_stop:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop
+    path: ../externaltools/FragGeneScan-1.20/train/stop
   prob_start1:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/start1
+    path: ../externaltools/FragGeneScan-1.20/train/start1
   prob_stop1:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/stop1
+    path: ../externaltools/FragGeneScan-1.20/train/stop1
   pwm_dist:
     class: File
-    path: /hps/nobackup/production/metagenomics/pipeline/tools/FragGeneScan1.20/train/pwm
+    path: ../externaltools/FragGeneScan-1.20/train/pwm
 mapseq_ref:  # downloaded from https://www.arb-silva.de/fileadmin/silva_databases/qiime/Silva_128_release.tgz
   format: edam:format_1929
   class: File
