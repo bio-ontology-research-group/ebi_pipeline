@@ -18,6 +18,8 @@ https://www.ebi.ac.uk/metagenomics/pipelines/4.0
 
 1. Run setup.sh
 
+## ---------------------------------------------------------
+
 2. Setup all the databases under `ref-dbs/`
 
 3. Then run the following (setting of path maynot be needed)
