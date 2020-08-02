@@ -123,4 +123,4 @@ ncRNA_other_model_clans:
     path: ../ref-dbs/other/other.claninfo
 go_summary_config:
     class: File
-    path: tools/GO-slim/go_summary-config.json
+    path: externaltools/GO-slim/go_summary-config.json
