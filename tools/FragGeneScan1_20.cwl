@@ -25,7 +25,7 @@ requirements:
   InlineJavascriptRequirement: {}
   InitialWorkDirRequirement:
     listing:
-      - entryname: train/model
+      - entryname: train/complete
         entry: $(inputs.model.main)
       - entryname: train/gene
         entry: $(inputs.model.prob_forward)
@@ -80,7 +80,7 @@ arguments:
  - prefix: -o
    valueFrom: $(runtime.outdir)/predicted_cds
  - prefix: -t
-   valueFrom: model
+   valueFrom: $(inputs.model.main.nameroot)  ##model 
 
 outputs:
   predicted_CDS_aa:
