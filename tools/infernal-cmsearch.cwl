@@ -5,8 +5,8 @@ doc: "http://eddylab.org/infernal/Userguide.pdf"
 
 requirements:
   ResourceRequirement:
-    ramMin: 40240
-    coresMin: 16
+    ramMin: 80240
+    coresMin: 64
 hints:
   SoftwareRequirement:
     packages:

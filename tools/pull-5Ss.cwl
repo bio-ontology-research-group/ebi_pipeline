@@ -9,7 +9,7 @@ requirements:
 inputs:
   hits: { type: File, streamable: true }
 
-stdin: ${inputs.hits.path}
+stdin: $(inputs.hits.path)
 
 baseCommand: [ grep, RF00002 ]
 
