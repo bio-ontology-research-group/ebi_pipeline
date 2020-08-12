@@ -105,3 +105,9 @@ venv.bak/
 
 .idea/
 .DS_STORE
+
+# ASHRAF
+output/
+ref-dbs
+workflows/ymls/my-singleraw-reads--v.5-cond.yml
+
