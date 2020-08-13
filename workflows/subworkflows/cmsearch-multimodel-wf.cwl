@@ -9,9 +9,9 @@ requirements:
   - class: ScatterFeatureRequirement
 
 inputs:
-  clan_info: string
+  clan_info: File
   #cores: int
-  covariance_models: string[]
+  covariance_models: File[]
   query_sequences: File
   targetFile: File
 
@@ -32,14 +32,14 @@ steps:
     run: ../../tools/RNA_prediction/cmsearch/infernal-cmsearch-v1.1.2.cwl
     in:
       covariance_model_database: covariance_models
-      cpu: { default: 8 }
+      cpu: { default: 32 } ## 8 }
       omit_alignment_section:
         default: true
       only_hmm:
         default: true
       query_sequences: query_sequences
       search_space_size:
-        default: 1000
+        default: 8000 ##1000
     scatter: covariance_model_database
     out: [ matches, programOutput ]
 

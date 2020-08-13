@@ -8,7 +8,7 @@ baseCommand:
   - cmsearch
 inputs:
   - id: covariance_model_database
-    type: string
+    type: File
     inputBinding:
       position: 1
   - id: cpu
@@ -23,7 +23,7 @@ inputs:
     inputBinding:
       position: 0
       prefix: '--cut_ga'
-    label: use CM's GA gathering cutoffs as reporting thresholds
+    label: use CM's' GA gathering cutoffs as reporting thresholds
   - id: omit_alignment_section
     type: boolean?
     inputBinding:
@@ -64,13 +64,15 @@ outputs:
     type: File
     format: edam:format_3475
     outputBinding:
-      glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch_matches.tbl
+      ##glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch_matches.tbl
+      glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.basename).cmsearch_matches.tbl
   - id: programOutput
     label: 'direct output to file, not stdout'
     type: File
     format: edam:format_3475
     outputBinding:
-      glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch.out
+      ##glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch.out
+      glob: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.basename).cmsearch.out
 
 doc: >
   Infernal ("INFERence of RNA ALignment") is for searching DNA sequence
@@ -90,10 +92,12 @@ label: Search sequence(s) against a covariance model database
 arguments:
   - position: 0
     prefix: '--tblout'
-    valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch_matches.tbl
+    ##valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch_matches.tbl
+    valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.basename).cmsearch_matches.tbl
   - position: 0
     prefix: '-o'
-    valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch.out
+    ##valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.split('/').slice(-1)[0]).cmsearch.out
+    valueFrom: $(inputs.query_sequences.basename).$(inputs.covariance_model_database.basename).cmsearch.out
 
 hints:
   - class: SoftwareRequirement

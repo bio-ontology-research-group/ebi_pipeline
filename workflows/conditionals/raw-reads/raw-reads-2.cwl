@@ -19,13 +19,13 @@ inputs:
 
     ssu_db: {type: File, secondaryFiles: [.mscluster] }
     lsu_db: {type: File, secondaryFiles: [.mscluster] }
-    ssu_tax: string
-    lsu_tax: string
-    ssu_otus: string
-    lsu_otus: string
+    ssu_tax: File
+    lsu_tax: File
+    ssu_otus: File
+    lsu_otus: File
 
-    rfam_models: string[]
-    rfam_model_clans: string
+    rfam_models: File[]
+    rfam_model_clans: File
     other_ncRNA_models: string[]
 
     ssu_label: string

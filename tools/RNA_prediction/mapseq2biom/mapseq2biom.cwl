@@ -14,7 +14,7 @@ requirements:
 
 inputs:
   otu_table:
-    type: string
+    type: File
     doc: |
       the OTU table produced for the taxonomies found in the reference
       databases that was used with MAPseq

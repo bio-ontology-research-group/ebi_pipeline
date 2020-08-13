@@ -33,7 +33,7 @@ inputs:
     format: edam:format_1929  # FASTA
 
   taxonomy:
-    type: string
+    type: File
     inputBinding:
       position: 3
 
