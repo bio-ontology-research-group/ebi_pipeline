@@ -21,7 +21,7 @@ inputs:
     streamable: true
     # format: edam:format_1930  # FASTQ
 
-baseCommand: [ bash ]
+baseCommand: [ sh ]
 
 arguments:
   - valueFrom: |

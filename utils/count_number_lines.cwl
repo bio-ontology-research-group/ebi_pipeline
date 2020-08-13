@@ -21,7 +21,7 @@ inputs:
     type: File
     streamable: true
 
-baseCommand: [ bash ]
+baseCommand: [ sh ]
 
 arguments:
   - valueFrom: |
