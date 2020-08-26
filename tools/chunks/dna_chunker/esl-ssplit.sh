@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Esl-ssplit wrapper - because Toil gives to input file a very long name
 
