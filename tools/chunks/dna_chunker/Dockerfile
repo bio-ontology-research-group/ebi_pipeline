@@ -24,4 +24,8 @@ RUN curl -L -o bio-easel.tar.gz https://github.com/nawrockie/Bio-Easel/archive/v
     chmod +x scripts/esl-ssplit.pl
 RUN perl Makefile.PL && make && make test && make install
 ENV PATH="/opt/scripts/:${PATH}"
+##Added by Ashraf
+COPY esl-ssplit.sh /opt/scripts/
+RUN  chmod +x /opt/scripts/esl-ssplit.sh
+## added above lines
 CMD ["esl-ssplit.pl"]
