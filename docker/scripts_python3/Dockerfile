@@ -6,6 +6,10 @@ RUN pip install --upgrade pip
 RUN pip install -q biopython pandas networkx
 RUN pip install -q pyyaml
 
+# pigz
+RUN apt update 
+RUN apt install pigz
+
 COPY antismash_to_gff_nojson.py \
      build_assembly_gff.py \
      count_fastq.py \

@@ -5,7 +5,7 @@ $namespaces:
   iana: 'https://www.iana.org/assignments/media-types/'
   s: 'http://schema.org/'
 id: i5
-baseCommand: interproscan.sh
+baseCommand: /home/kibriyam/workpipelines/external_tools/interproscan-5.36-75.0/interproscan.sh
 inputs:
   - id: inputFile
     type: File

@@ -18,6 +18,8 @@ RUN wget http://eddylab.org/software/hmmer/hmmer-$VERSION.tar.gz \
    && cd hmmer-$VERSION \
    && ./configure && make && make install
 
+RUN rm hmmer-$VERSION.tar.gz
+
 ENV PATH="/hmmer-$VERSION:${PATH}"
 
 CMD ["hmmsearch"]
