@@ -154,9 +154,16 @@ func_ann_names_hmmer: .hmm.tsv.without_header
 
 HMM_gathering_bit_score: true
 HMM_omit_alignment: true
-HMM_name_database: ../../ref-dbs/db_kofam/db_kofam.hmm
+##HMM_name_database: ../../ref-dbs/db_kofam/db_kofam.hmm
+##hmmsearch_header: 'target_name\ttarget_accession\ttlen\tquery_name\tquery_accession\tqlen\tfull_sequence_e-value\tfull_sequence_score\tfull_sequence_bias\t#\tof\tc-evalue\ti-evalue\tdomain_score\tdomain_bias\thmm_coord_from\thmm_coord_to\tali_coord_from\tali_coord_to\tenv_coord_from\tenv_coord_to\tacc\tdescription_of_target'
+##ko_file: ../../ref-dbs/kofam_ko_desc.tsv # checksum: b53337abf8761fd835cff767622f254a
+HMM_name_database: db_kofam.hmm
+HMM_data:
+  class: Directory
+  path: /home/kibriyam/workpipelines/pipeline-v5/ref-dbs
 hmmsearch_header: 'target_name\ttarget_accession\ttlen\tquery_name\tquery_accession\tqlen\tfull_sequence_e-value\tfull_sequence_score\tfull_sequence_bias\t#\tof\tc-evalue\ti-evalue\tdomain_score\tdomain_bias\thmm_coord_from\thmm_coord_to\tali_coord_from\tali_coord_to\tenv_coord_from\tenv_coord_to\tacc\tdescription_of_target'
-ko_file: ../../ref-dbs/kofam_ko_desc.tsv # checksum: b53337abf8761fd835cff767622f254a
+ko_file: ref-dbs/kofam_ko_desc.tsv
+
 
 InterProScan_applications:
   - PfamA
@@ -166,7 +173,7 @@ InterProScan_applications:
   - Gene3d
 InterProScan_outputFormat:
   - TSV
-InterProScan_databases: ../../ref-dbs/interproscan-5.36-75.0/data
+InterProScan_databases: /home/kibriyam/workpipelines/pipeline-v5/ref-dbs/interproscan-5.36-75.0/data
 ips_header: 'protein_accession\tsequence_md5_digest\tsequence_length\tanalysis\tsignature_accession\tsignature_description\tstart_location\tstop_location\tscore\tstatus\tdate\taccession\tdescription\tgo\tpathways_annotations'
 
 # GO

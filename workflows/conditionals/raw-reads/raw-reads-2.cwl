@@ -67,9 +67,9 @@ outputs:
   sequence_categorisation_folder:
     type: Directory
     outputSource: move_to_seq_cat_folder/out
-  # taxonomy-summary_folder:
-  #   type: Directory
-  #   outputSource: return_tax_dir/out
+  taxonomy-summary_folder:
+    type: Directory
+    outputSource: return_tax_dir/out
 
   chunking_nucleotides:
     type: File[]?
@@ -121,8 +121,8 @@ steps:
       - ncRNA
       - cmsearch_result
       - LSU-SSU-count
-      # - SSU_folder
-      # - LSU_folder
+      - SSU_folder
+      - LSU_folder
       - compressed_SSU_fasta
       - compressed_LSU_fasta
       - compressed_rnas
@@ -250,14 +250,14 @@ steps:
     out: [ out ]
 
 # return taxonomy summary dir
-  # return_tax_dir:
-  #   run: ../../../utils/return_directory.cwl
-  #   in:
-  #     dir_list:
-  #       - rna_prediction/SSU_folder
-  #       - rna_prediction/LSU_folder
-  #     dir_name: { default: 'taxonomy-summary' }
-  #   out: [out]
+  return_tax_dir:
+    run: ../../../utils/return_directory.cwl
+    in:
+      dir_list:
+        - rna_prediction/SSU_folder
+        - rna_prediction/LSU_folder
+      dir_name: { default: 'taxonomy-summary' }
+    out: [out]
 
 
 # << FUNCTIONAL FORMATTING AND CHUNKING >>

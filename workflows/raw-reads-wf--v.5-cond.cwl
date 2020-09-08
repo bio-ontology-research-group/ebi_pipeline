@@ -81,9 +81,9 @@ outputs:
   sequence-categorisation_folder:
     type: Directory?
     outputSource: after-qc/sequence_categorisation_folder
-  # taxonomy-summary_folder:
-  #   type: Directory?
-  #   outputSource: after-qc/taxonomy-summary_folder
+  taxonomy-summary_folder:
+     type: Directory?
+     outputSource: after-qc/taxonomy-summary_folder
   rna-count:
     type: File?
     outputSource: after-qc/rna-count
@@ -176,7 +176,7 @@ steps:
     out:
       - motus_output
       - sequence_categorisation_folder
-      # - taxonomy-summary_folder
+      - taxonomy-summary_folder
       - rna-count
       - compressed_files
       - functional_annotation_folder
