@@ -55,7 +55,7 @@ inputs:
     InterProScan_applications: string[]  # ../tools/InterProScan/InterProScan-apps.yaml#apps[]?
     InterProScan_outputFormat: string[]  # ../tools/InterProScan/InterProScan-protein_formats.yaml#protein_formats[]?
     ips_header: string
-    ko_file: string
+    ko_file: File
 
     # GO
     go_config: string?

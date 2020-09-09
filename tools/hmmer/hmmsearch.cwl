@@ -14,8 +14,8 @@ hints:
 requirements:
   ShellCommandRequirement: {}
   ResourceRequirement:
-    ramMin: 6000
-    coresMin: 32
+    ramMin: 8000
+    coresMin: 16
   InlineJavascriptRequirement: {}
   ScatterFeatureRequirement: {}
 
@@ -32,7 +32,7 @@ arguments:
     valueFrom: $(inputs.seqfile.nameroot)_hmmsearch.tbl
     position: 2
   - prefix: --cpu
-    valueFrom: '32'
+    valueFrom: '16'
   - prefix: -o
     valueFrom: '/dev/null'
   - valueFrom: $(inputs.path_database.path)/$(inputs.database_name)
