@@ -179,4 +179,4 @@ InterProScan_databases: /home/kibriyam/workpipelines/pipeline-v5/ref-dbs/interpr
 ips_header: 'protein_accession\tsequence_md5_digest\tsequence_length\tanalysis\tsignature_accession\tsignature_description\tstart_location\tstop_location\tscore\tstatus\tdate\taccession\tdescription\tgo\tpathways_annotations'
 
 # GO
-go_config: ../tools/GO-slim/go_summary-config.json
+go_config: /tools/go_summary-config.json
