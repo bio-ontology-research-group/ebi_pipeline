@@ -15,7 +15,7 @@ requirements:
   ShellCommandRequirement: {}
   ResourceRequirement:
     ramMin: 6000
-    coresMin: 4
+    coresMin: 32
   InlineJavascriptRequirement: {}
   ScatterFeatureRequirement: {}
 
@@ -32,9 +32,12 @@ arguments:
     valueFrom: $(inputs.seqfile.nameroot)_hmmsearch.tbl
     position: 2
   - prefix: --cpu
-    valueFrom: '4'
+    valueFrom: '32'
   - prefix: -o
     valueFrom: '/dev/null'
+  - valueFrom: $(inputs.path_database.path)/$(inputs.database_name)
+    position: 5
+    
 
 inputs:
 
@@ -50,17 +53,25 @@ inputs:
       position: 4
       prefix: "--cut_ga"
 
-  path_database:
-    type: string
-    inputBinding:
-      position: 5
-
   seqfile:
     format: edam:format_1929  # FASTA
     type: File
     inputBinding:
       position: 6
       separate: true
+
+  path_database:
+    type: Directory
+    # inputBinding:
+    #  position: 12
+    #  prefix: "##_DBdir "
+
+  database_name:
+    type: string
+    # inputBinding:
+    #  position: 13
+    #  prefix: "##_DBname "
+
 
 
 outputs:

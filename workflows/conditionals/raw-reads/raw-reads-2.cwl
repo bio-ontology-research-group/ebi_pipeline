@@ -46,6 +46,7 @@ inputs:
     HMM_gathering_bit_score: boolean
     HMM_omit_alignment: boolean
     HMM_name_database: string
+    HMM_dbdir: Directory
     hmmsearch_header: string
     EggNOG_db: string?
     EggNOG_diamond_db: string?
@@ -161,6 +162,7 @@ steps:
       HMM_gathering_bit_score: HMM_gathering_bit_score
       HMM_omit_alignment: HMM_omit_alignment
       HMM_database: HMM_name_database
+      HMM_dbdir: HMM_dbdir
       InterProScan_databases: InterProScan_databases
       InterProScan_applications: InterProScan_applications
       InterProScan_outputFormat: InterProScan_outputFormat

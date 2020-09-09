@@ -21,6 +21,7 @@ inputs:
   HMM_gathering_bit_score: boolean
   HMM_omit_alignment: boolean
   HMM_database: string
+  HMM_dbdir: Directory 
   previous_step_result: File?
 
 outputs:
@@ -43,7 +44,8 @@ steps:
     scatter: seqfile
     in:
       seqfile: split_seqs/chunks
-      path_database: HMM_database
+      database_name: HMM_database
+      path_database: HMM_dbdir
       gathering_bit_score: HMM_gathering_bit_score
       omit_alignment: HMM_omit_alignment
     out: [ output_table ]
