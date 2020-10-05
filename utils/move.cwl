@@ -19,7 +19,7 @@ inputs:
     inputBinding:
       position: 2
 
-baseCommand: [ mv ]
+baseCommand: [ cp ] ##mv ]
 
 outputs:
   renamed_file:
