@@ -10,6 +10,9 @@ RUN pip install -q pyyaml
 RUN apt update 
 RUN apt install pigz
 
+## install gt
+RUN apt --yes install genometools
+
 COPY antismash_to_gff_nojson.py \
      build_assembly_gff.py \
      count_fastq.py \
