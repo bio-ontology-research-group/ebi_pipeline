@@ -116,6 +116,7 @@ def split(path, lineNumber, prefix):
 def splitfasta(path, targetSize, tool_path):
     try:
         print('---> run fasta chunk')
+        ##print("toolpath: ", tool_path, 'targetsize: ', targetSize, 'path: ', path)
         subprocess.check_output(
                 [tool_path, 'splitfasta',
                  '-targetsize', targetSize, path], stderr=subprocess.STDOUT)

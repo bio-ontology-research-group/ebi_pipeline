@@ -78,6 +78,15 @@ outputs:
   chunking_proteins:
     type: File[]?
     outputSource: chunking_final/protein_fasta_chunks
+
+  # chunking_nucleotides:
+  #   type: Directory
+  #   outputSource: move_nucleotidechunks_to_folder/out
+  # chunking_proteins:
+  #   type: Directory
+  #   outputSource: move_proteinchunks_to_folder/out
+
+
   rna-count:
     type: File
     outputSource: rna_prediction/LSU-SSU-count
@@ -237,6 +246,29 @@ steps:
       - nucleotide_fasta_chunks                         # fasta, ffn
       - protein_fasta_chunks                            # faa
       - SC_fasta_chunks                                 # LSU, SSU
+
+  ## Following added by ASHRAF 
+  # move_nucleotidechunks_to_folder:
+  #   run: ../../../utils/return_directory.cwl
+  #   in:
+  #     file_list:
+  #       source:
+  #         - chunking_final/nucleotide_fasta_chunks
+  #       linkMerge: merge_flattened
+  #     dir_name: { default: 'nucleotide_fasta_chunks' }
+  #   out: [ out ]
+
+  # move_proteinchunks_to_folder:
+  #   run: ../../../utils/return_directory.cwl
+  #   in:
+  #     file_list:
+  #       source:
+  #         - chunking_final/protein_fasta_chunks
+  #       linkMerge: merge_flattened
+  #     dir_name: { default: 'protein_fasta_chunks' }
+  #   out: [ out ]
+  ## Above added by ASHRAF 
+
 
 # << move chunked files >>
   move_to_seq_cat_folder:  # LSU and SSU

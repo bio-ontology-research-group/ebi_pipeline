@@ -82,6 +82,7 @@ def chunk_fasta_file(infile, fasta_type, outdir):
                                                   targetSize=cutoff,
                                                   tool_path=tool_path,
                                                   outdir=outdir)
+    ##print(infile, ' - ', resultFileSuffix, ' - ', cutoff, ' - ', tool_path, ' - ', outdir)
     fasta_file_chunker.chunkFASTAResultFile()
 
 

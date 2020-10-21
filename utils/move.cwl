@@ -1,35 +1,28 @@
 #!/usr/bin/env
 cwlVersion: v1.0
-class: CommandLineTool
+class: ExpressionTool
 
 requirements:
   InlineJavascriptRequirement: {}
-  ResourceRequirement:
-    coresMax: 16
-    ramMin: 200
+
 
 inputs:
   initial_file:
     type: File
-    inputBinding:
-      position: 1
 
   out_file_name:
     type: string
-    inputBinding:
-      position: 2
-
-baseCommand: [ cp ] ##mv ]
 
 outputs:
   renamed_file:
     type: File
-    outputBinding:
-      glob: $(inputs.out_file_name)
 
-hints:
-  - class: DockerRequirement
-    dockerPull: alpine:3.7
+expression: |
+  ${
+    inputs.initial_file.basename = inputs.out_file_name;
+    return { "renamed_file": inputs.initial_file };
+  }
+
 
 $namespaces:
  edam: http://edamontology.org/

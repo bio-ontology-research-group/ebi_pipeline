@@ -32,7 +32,7 @@ arguments:
     valueFrom: $(inputs.seqfile.nameroot)_hmmsearch.tbl
     position: 2
   - prefix: --cpu
-    valueFrom: '16'
+    valueFrom: '4'
   - prefix: -o
     valueFrom: '/dev/null'
   - valueFrom: $(inputs.path_database.path)/$(inputs.database_name)

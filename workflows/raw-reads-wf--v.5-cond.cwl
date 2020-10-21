@@ -136,8 +136,8 @@ steps:
       - input_files_hashsum_single
 
   after-qc:
-    run: conditionals/raw-reads/raw-reads-2.cwl
     when: $(inputs.status.basename == 'QC-PASSED')
+    run: conditionals/raw-reads/raw-reads-2.cwl
     in:
       status: before-qc/qc-status
       motus_input: before-qc/motus_input

@@ -6,6 +6,11 @@ requirements:
   ResourceRequirement:
     coresMax: 1
     ramMin: 1000  # just a default, could be lowered
+  ## ASHRAF comment: try this 
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.infile)
+      ##- $(inputs.outdirname)
 
 hints:
   - class: DockerRequirement
