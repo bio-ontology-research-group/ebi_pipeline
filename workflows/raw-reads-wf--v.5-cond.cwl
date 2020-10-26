@@ -116,6 +116,15 @@ outputs:
     type: File?
     outputSource: touch_file_flag/created_file
 
+  no_cds_flag_file:
+    type: File?
+    outputSource: touch_no_cds_flag/created_file
+
+  no_tax_flag_file:
+    type: File?
+    outputSource: after-qc/optional_tax_file_flag
+
+
 steps:
 
 # << First part >>
@@ -185,6 +194,8 @@ steps:
       - stats
       - chunking_nucleotides
       - chunking_proteins
+      - count_CDS
+      - optional_tax_file_flag
 
   touch_file_flag:
     when: $(inputs.count != undefined || inputs.status.basename == "QC-FAILED")
@@ -195,6 +206,13 @@ steps:
       filename: { default: 'wf-completed' }
     out: [ created_file ]
 
+  touch_no_cds_flag:
+    when: $(inputs.value == 0 )
+    run: ../utils/touch_file.cwl
+    in:
+      value: after-qc/count_CDS
+      filename: { default: 'no-cds' }
+    out: [ created_file ]
 
 $namespaces:
  edam: http://edamontology.org/
