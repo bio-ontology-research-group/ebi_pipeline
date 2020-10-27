@@ -216,6 +216,7 @@ steps:
        HMM_gathering_bit_score: HMM_gathering_bit_score
        HMM_omit_alignment: HMM_omit_alignment
        HMM_database: HMM_name_database
+       HMM_dbdir: HMM_dbdir
        hmmsearch_header: hmmsearch_header
 
        go_config: go_config

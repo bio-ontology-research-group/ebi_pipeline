@@ -13,8 +13,8 @@ requirements:
 inputs:
   type: string
   query_sequences: File
-  clan_info: string
-  covariance_models: string[]
+  clan_info: File
+  covariance_models: File[]
 
 outputs:
 

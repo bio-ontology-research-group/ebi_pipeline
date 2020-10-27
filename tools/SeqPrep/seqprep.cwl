@@ -29,7 +29,7 @@ inputs:
    label: second read input fastq
    inputBinding:
      prefix: -r
- name: string
+ ##name: string
 
 baseCommand: SeqPrep
 
@@ -39,7 +39,8 @@ arguments:
  - "-2"
  - reverse_unmerged.fastq.gz
  - valueFrom: |
-     ${ return inputs.name + '_MERGED.fastq.gz' }
+     ##${ return inputs.name + '_MERGED.fastq.gz' }
+     ${ return inputs.forward_reads.nameroot.split('_')[0] + '_MERGED.fastq.gz' }
    prefix: "-s"
  # - "-3"
  # - forward_discarded.fastq.gz

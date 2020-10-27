@@ -166,6 +166,7 @@ steps:
       5.8s_pattern: 5.8s_pattern
       CGC_postfixes: CGC_postfixes
       cgc_chunk_size: cgc_chunk_size
+      CGC_config: CGC_config
       protein_chunk_size_hmm: protein_chunk_size_hmm
       protein_chunk_size_IPS: protein_chunk_size_IPS
       func_ann_names_ips: func_ann_names_ips

@@ -10,8 +10,8 @@ requirements:
 
 inputs:
   query_sequences: File
-  covariance_models: string[]
-  clan_info: string
+  covariance_models: File[]
+  clan_info: File
 
 outputs:
   concatenate_matches:

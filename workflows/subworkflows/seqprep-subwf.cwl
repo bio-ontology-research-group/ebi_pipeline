@@ -7,7 +7,7 @@ requirements:
   MultipleInputFeatureRequirement: {}
   InlineJavascriptRequirement: {}
   StepInputExpressionRequirement: {}
-  ScatterFeatureRequirement: {}
+  ##ScatterFeatureRequirement: {}
 
 inputs:
     forward_reads: File?
@@ -40,14 +40,14 @@ steps:
   overlap_reads:
     label: Paired-end overlapping reads are merged
     run: ../../tools/SeqPrep/seqprep.cwl
-    when: $(inputs.single == undefined)
+    when: $(inputs.single2 == undefined)
     in:
-      single: single_reads
+      single2: single_reads
       forward_reads: filter_paired/forward_filtered
       reverse_reads: filter_paired/reverse_filtered
-      name:
-        source: forward_reads
-        valueFrom: $(self.nameroot.split('_')[0])
+      ## name:
+      ##   source: forward_reads
+      ##   valueFrom: $(self.nameroot.split('_')[0])
     out: [ merged_reads, forward_unmerged_reads, reverse_unmerged_reads ]
 
 # << unzip merged reads >>
@@ -55,6 +55,7 @@ steps:
     when: $(inputs.single == undefined)
     run: ../../utils/multiple-gunzip.cwl
     in:
+      single: single_reads
       target_reads: overlap_reads/merged_reads
       reads: { default: true }
     out: [ unzipped_merged_reads ]
@@ -64,6 +65,7 @@ steps:
     run: ../../utils/multiple-gunzip.cwl
     when: $(inputs.single != undefined)
     in:
+      single: single_reads
       target_reads: single_reads
       reads: { default: true }
     out: [ unzipped_merged_reads ]
