@@ -34,7 +34,7 @@ inputs:
     5.8s_pattern: string
 
     # cgc
-    CGC_config: string
+    CGC_config: string?
     CGC_postfixes: string[]
     cgc_chunk_size: int
 
