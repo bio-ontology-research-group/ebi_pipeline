@@ -60,6 +60,8 @@ docker build -t mgnify/pipeline-v5.seqprep ${PIPELINE}/tools/SeqPrep
 
 # mOUTs: quay.io/biocontainers/motus:2.1.1--py37_3
 docker build -t mgnify/pipeline-v5.motus ${PIPELINE}/tools/Raw_reads/mOTUs
+# filter paird reads 
+docker build -t microbiomeinformatics/pipeline-v5.filter-paired  ${PIPELINE}/tools/Raw_reads/filter_paired_reads
 # bedtools: quay.io/biocontainers/bedtools:2.28.0--hdf88d34_0
 docker build -t mgnify/pipeline-v5.bedtools ${PIPELINE}/tools/mask-for-ITS/bedtools
 
