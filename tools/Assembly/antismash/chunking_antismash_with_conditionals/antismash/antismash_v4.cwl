@@ -21,7 +21,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull:  mgnify/pipeline-v5.antismash
+    dockerPull:  ashrafborg/pipeline-v5.antismash
 
 inputs:
 

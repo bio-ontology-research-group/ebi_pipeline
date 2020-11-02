@@ -9,7 +9,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.seqprep:latest
+    dockerPull: ashrafborg/pipeline-v5.seqprep:latest
  #SoftwareRequirement:
    #packages:
      #seqprep:

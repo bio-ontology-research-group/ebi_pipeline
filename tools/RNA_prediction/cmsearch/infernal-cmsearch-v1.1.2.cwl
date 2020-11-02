@@ -178,7 +178,7 @@ hints:
         version:
           - 1.1.2
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.cmsearch:latest
+    dockerPull: ashrafborg/pipeline-v5.cmsearch:latest
 
 requirements:
   - class: InlineJavascriptRequirement

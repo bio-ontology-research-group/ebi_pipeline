@@ -11,7 +11,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.bash-scripts
+    dockerPull: ashrafborg/pipeline-v5.bash-scripts
 
 baseCommand: [diamond_post_run_join.sh]
 

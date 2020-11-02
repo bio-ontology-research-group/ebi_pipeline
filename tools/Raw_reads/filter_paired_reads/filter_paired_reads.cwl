@@ -41,7 +41,7 @@ outputs:
 
 hints:
   - class: DockerRequirement
-    dockerPull: microbiomeinformatics/pipeline-v5.filter-paired
+    dockerPull: ashrafborg/pipeline-v5.filter-paired
 
 
 $namespaces:

@@ -116,7 +116,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.interproscan:latest
+    dockerPull: ashrafborg/pipeline-v5.interproscan:latest
 
 $namespaces:
   edam: 'http://edamontology.org/'

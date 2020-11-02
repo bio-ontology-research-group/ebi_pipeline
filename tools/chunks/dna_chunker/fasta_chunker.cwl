@@ -15,7 +15,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.dna_chunking:latest
+    dockerPull: ashrafborg/pipeline-v5.dna_chunking:latest
 
 inputs:
 

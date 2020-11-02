@@ -33,7 +33,7 @@ outputs:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.krona:latest
+    dockerPull: ashrafborg/pipeline-v5.krona:latest
 
 $namespaces:
  edam: http://edamontology.org/

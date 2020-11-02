@@ -14,7 +14,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.python3
+    dockerPull: ashrafborg/pipeline-v5.python3
 
   SoftwareRequirement:
     packages:

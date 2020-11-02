@@ -11,7 +11,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.python3
+    dockerPull: ashrafborg/pipeline-v5.python3
 
 baseCommand: [ build_assembly_gff.py ]
 

@@ -71,7 +71,7 @@ outputs:
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.python3:latest
+    dockerPull: ashrafborg/pipeline-v5.python3:latest
 
 $namespaces:
  edam: http://edamontology.org/

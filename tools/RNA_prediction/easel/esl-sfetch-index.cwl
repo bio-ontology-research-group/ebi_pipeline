@@ -7,7 +7,7 @@ doc: "https://github.com/EddyRivasLab/easel"
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.easel:latest
+    dockerPull: ashrafborg/pipeline-v5.easel:latest
 
 baseCommand: [ esl-index.sh ]
 

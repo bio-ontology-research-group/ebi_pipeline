@@ -9,7 +9,7 @@ label: "Taking KOs corresponding contigs from hmmscan result"
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.python3
+    dockerPull: ashrafborg/pipeline-v5.python3
 
 requirements:
   InlineJavascriptRequirement: {}

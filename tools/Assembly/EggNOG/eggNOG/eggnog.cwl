@@ -9,7 +9,7 @@ doc: |
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.eggnog
+    dockerPull: ashrafborg/pipeline-v5.eggnog
 
 requirements:
   ResourceRequirement:

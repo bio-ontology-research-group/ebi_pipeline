@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.mapseq2biom:latest
+    dockerPull: ashrafborg/pipeline-v5.mapseq2biom:latest
 
 requirements:
   ResourceRequirement:

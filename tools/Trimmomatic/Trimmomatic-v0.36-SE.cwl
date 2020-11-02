@@ -5,7 +5,7 @@ class: CommandLineTool
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.trimmomatic:latest
+    dockerPull: ashrafborg/pipeline-v5.trimmomatic:latest
 #  - class: SoftwareRequirement
 #    packages:
 #      trimmomatic:

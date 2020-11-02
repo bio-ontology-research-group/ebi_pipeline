@@ -15,7 +15,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.genome-properties:latest
+    dockerPull: ashrafborg/pipeline-v5.genome-properties:latest
 
 baseCommand: [assign_genome_properties.pl]    # without docker
 

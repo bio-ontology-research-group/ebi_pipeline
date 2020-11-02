@@ -9,7 +9,7 @@ label: "Biosequence analysis using profile hidden Markov models"
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.hmmer:latest
+    dockerPull: ashrafborg/pipeline-v5.hmmer:latest
 
 requirements:
   ShellCommandRequirement: {}

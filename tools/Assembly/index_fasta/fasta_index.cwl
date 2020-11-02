@@ -8,7 +8,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.bash-scripts:latest
+    dockerPull: ashrafborg/pipeline-v5.bash-scripts:latest
 
 inputs:
   fasta:

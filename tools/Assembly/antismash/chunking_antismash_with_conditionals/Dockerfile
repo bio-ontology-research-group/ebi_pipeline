@@ -55,7 +55,7 @@ RUN apt-get install -y \
                          python-scipy \
                          python-sklearn \
                          tigr-glimmer
-RUN pip install "biopython>=1.72"
+RUN pip install "biopython==1.76"
 RUN pip install helperlibs
 
 # antismash
@@ -70,7 +70,7 @@ RUN download-antismash-databases
 
 
 # pipeline tools
-COPY run_antismash_short.sh /tools/
+COPY antismash/run_antismash_short.sh /tools/
 
 RUN chmod a+rwx /tools/*
 

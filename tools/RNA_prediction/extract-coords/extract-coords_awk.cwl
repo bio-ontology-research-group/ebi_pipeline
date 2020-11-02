@@ -7,7 +7,7 @@ $namespaces:
 
 hints:
  DockerRequirement:
-   dockerPull: mgnify/pipeline-v5.bash-scripts:latest
+   dockerPull: ashrafborg/pipeline-v5.bash-scripts:latest
 
 requirements:
   ShellCommandRequirement: {}

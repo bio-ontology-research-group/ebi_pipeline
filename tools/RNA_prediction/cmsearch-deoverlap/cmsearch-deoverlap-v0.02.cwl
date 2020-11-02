@@ -53,7 +53,7 @@ hints:
           - '0.02'
 
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.cmsearch-deoverlap:latest
+    dockerPull: ashrafborg/pipeline-v5.cmsearch-deoverlap:latest
 
 $schemas:
   - 'http://edamontology.org/EDAM_1.16.owl'

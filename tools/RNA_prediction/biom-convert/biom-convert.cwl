@@ -15,7 +15,7 @@ requirements:
 
 hints:
   DockerRequirement:
-    dockerPull: mgnify/pipeline-v5.biom-convert:latest
+    dockerPull: ashrafborg/pipeline-v5.biom-convert:latest
   SoftwareRequirement:
     packages:
       biom-format:

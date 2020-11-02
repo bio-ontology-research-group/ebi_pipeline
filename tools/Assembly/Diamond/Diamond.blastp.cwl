@@ -150,7 +150,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.diamond
+    dockerPull: ashrafborg/pipeline-v5.diamond
 
 $schemas:
   - 'http://edamontology.org/EDAM_1.20.owl'

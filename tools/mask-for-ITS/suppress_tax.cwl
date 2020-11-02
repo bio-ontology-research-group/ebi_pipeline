@@ -59,7 +59,7 @@ outputs:
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.python3
+    dockerPull: ashrafborg/pipeline-v5.python3
 
 $namespaces:
  s: http://schema.org/

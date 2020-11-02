@@ -12,7 +12,7 @@ requirements:
 
 hints:
  DockerRequirement:
-   dockerPull: mgnify/pipeline-v5.bedtools
+   dockerPull: ashrafborg/pipeline-v5.bedtools
 
 inputs:
   sequences:

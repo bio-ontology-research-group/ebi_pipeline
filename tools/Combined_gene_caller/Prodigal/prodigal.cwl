@@ -6,7 +6,7 @@ label: "Combined Gene Caller: Prodigal"
 
 hints:
   - class: DockerRequirement
-    dockerPull: mgnify/pipeline-v5.prodigal
+    dockerPull: ashrafborg/pipeline-v5.prodigal
 
 requirements:
   ResourceRequirement:
