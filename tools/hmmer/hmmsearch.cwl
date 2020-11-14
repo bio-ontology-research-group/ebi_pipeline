@@ -15,7 +15,7 @@ requirements:
   ShellCommandRequirement: {}
   ResourceRequirement:
     ramMin: 8000
-    coresMin: 16
+    coresMin: 4
   InlineJavascriptRequirement: {}
   ScatterFeatureRequirement: {}
 
