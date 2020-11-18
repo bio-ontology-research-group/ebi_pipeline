@@ -1,0 +1,9 @@
+database:
+  class: Directory
+  path: /home/radleyrp/Documents/pipelines/ourpipeline/deepgoplus/data/
+CGC_results_faa:
+  class: File
+  path: /home/radleyrp/Documents/pipelines/data/RMG_41.fa
+  format: http://edamontology.org/format_1929
+output_name: 'RMG_41_DGP_Results.tsv'
+
