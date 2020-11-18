@@ -77,23 +77,26 @@ outputs:
     type: Directory
     outputSource: return_tax_dir/out
 
-  chunking_nucleotides:
-    type: File[]
-    outputSource: chunking_final/nucleotide_fasta_chunks
-  chunking_proteins:
-    type: File[]
-    outputSource: chunking_final/protein_fasta_chunks
-
   # chunking_nucleotides:
-  #   type: Directory
-  #   outputSource: move_nucleotidechunks_to_folder/out
+  #   type: File[]
+  #   outputSource: chunking_final/nucleotide_fasta_chunks
   # chunking_proteins:
-  #   type: Directory
-  #   outputSource: move_proteinchunks_to_folder/out
+  #   type: File[]
+  #   outputSource: chunking_final/protein_fasta_chunks
 
+  chunking_nucleotides:
+    type: Directory
+    outputSource: move_nucleotidechunks_to_folder/out
+  chunking_proteins:
+    type: Directory
+    outputSource: move_proteinchunks_to_folder/out
+
+  # deepgo_results:
+  #   type: File
+  #   outputSource: deepgoplus/dgp_results
   deepgo_results:
-    type: File
-    outputSource: deepgoplus/dgp_results
+    type: Directory
+    outputSource: move_deepgo_to_folder/out
    
   rna-count:
     type: File
@@ -284,25 +287,35 @@ steps:
       - SC_fasta_chunks                                 # LSU, SSU
 
   ## Following added by ASHRAF 
-  # move_nucleotidechunks_to_folder:
-  #   run: ../../../utils/return_directory.cwl
-  #   in:
-  #     file_list:
-  #       source:
-  #         - chunking_final/nucleotide_fasta_chunks
-  #       linkMerge: merge_flattened
-  #     dir_name: { default: 'nucleotide_fasta_chunks' }
-  #   out: [ out ]
+  move_nucleotidechunks_to_folder:
+    run: ../../../utils/return_directory.cwl
+    in:
+      file_list:
+        source:
+          - chunking_final/nucleotide_fasta_chunks
+        linkMerge: merge_flattened
+      dir_name: { default: 'nucleotide_fasta_chunks' }
+    out: [ out ]
 
-  # move_proteinchunks_to_folder:
-  #   run: ../../../utils/return_directory.cwl
-  #   in:
-  #     file_list:
-  #       source:
-  #         - chunking_final/protein_fasta_chunks
-  #       linkMerge: merge_flattened
-  #     dir_name: { default: 'protein_fasta_chunks' }
-  #   out: [ out ]
+  move_proteinchunks_to_folder:
+    run: ../../../utils/return_directory.cwl
+    in:
+      file_list:
+        source:
+          - chunking_final/protein_fasta_chunks
+        linkMerge: merge_flattened
+      dir_name: { default: 'protein_fasta_chunks' }
+    out: [ out ]
+
+  move_deepgo_to_folder:
+    run: ../../../utils/return_directory.cwl
+    in:
+      file_list:
+        source:
+          - deepgoplus/dgp_results
+        linkMerge: merge_flattened
+      dir_name: { default: 'deepgoplus_results' }
+    out: [ out ]
   ## Above added by ASHRAF 
 
 

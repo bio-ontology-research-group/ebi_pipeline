@@ -109,14 +109,14 @@ outputs:
     type: Directory?
 
   chunking_nucleotides:
-    type: File[]?
+    type: Directory?
     outputSource: after-qc/chunking_nucleotides
   chunking_proteins:
-    type: File[]?
+    type: Directory?
     outputSource: after-qc/chunking_proteins
 
   deepgoplus_results:
-    type: File?
+    type: Directory?
     outputSource: after-qc/deepgo_results
 
   completed_flag_file:
