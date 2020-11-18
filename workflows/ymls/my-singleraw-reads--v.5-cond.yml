@@ -136,6 +136,12 @@ other_ncRNA_models:
   - 'tmRNA.RF00023'
   - 'tRNA-Sec.RF01852'
 
+
+# DeepGOPlus 
+deepgoplus_dbdir: 
+  class: Directory
+  path: /home/radleyrp/Documents/pipelines/ourpipeline/deepgoplus/data/
+
 # Combined gene caller
 #CGC_config:
 #  class: File

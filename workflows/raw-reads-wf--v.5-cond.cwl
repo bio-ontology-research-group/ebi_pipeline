@@ -39,6 +39,9 @@ inputs:
     CGC_postfixes: string[]
     cgc_chunk_size: int
 
+    # deepgoplus
+    deepgoplus_dbdir: Directory
+
     # functional annotation
     protein_chunk_size_hmm: int
     protein_chunk_size_IPS: int
@@ -112,6 +115,10 @@ outputs:
     type: File[]?
     outputSource: after-qc/chunking_proteins
 
+  deepgoplus_results:
+    type: File?
+    outputSource: after-qc/deepgo_results
+
   completed_flag_file:
     type: File?
     outputSource: touch_file_flag/created_file
@@ -167,6 +174,7 @@ steps:
       CGC_postfixes: CGC_postfixes
       cgc_chunk_size: cgc_chunk_size
       CGC_config: CGC_config
+      deepgoplus_dbdir: deepgoplus_dbdir
       protein_chunk_size_hmm: protein_chunk_size_hmm
       protein_chunk_size_IPS: protein_chunk_size_IPS
       func_ann_names_ips: func_ann_names_ips
@@ -195,6 +203,7 @@ steps:
       - stats
       - chunking_nucleotides
       - chunking_proteins
+      - deepgo_results
       - count_CDS
       - optional_tax_file_flag
 

@@ -38,6 +38,9 @@ inputs:
     CGC_postfixes: string[]
     cgc_chunk_size: int
 
+    # deepgoplus
+    deepgoplus_dbdir: Directory
+
     # functional annotation
     protein_chunk_size_hmm: int
     protein_chunk_size_IPS: int
@@ -88,7 +91,10 @@ outputs:
   #   type: Directory
   #   outputSource: move_proteinchunks_to_folder/out
 
-
+  deepgo_results:
+    type: File
+    outputSource: deepgoplus/dgp_results
+   
   rna-count:
     type: File
     outputSource: rna_prediction/LSU-SSU-count
@@ -182,6 +188,24 @@ steps:
     out: [ results, count_faa ]
     run: ../../subworkflows/raw_reads/CGC-subwf.cwl
 
+# << ------------------- DEEP GO PLUS--------------- >>
+# ADDED BY ASHRAF for BORG
+# 
+  deepgoplus:
+    run: ../../../tools/deepgoplus/deepgoplus.cwl
+    when: $(inputs.check_value != 0)
+    in:
+      check_value: cgc/count_faa
+      database: deepgoplus_dbdir
+      CGC_results_faa:
+        source: cgc/results
+        valueFrom: $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop() )
+      ##output_name: $(inputs.CGC_results_faa.basename)_deepgoplus.tsv
+      output_name: 
+       source: cgc/results
+       valueFrom:  $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop().basename )_deepgoplus.tsv
+    out: [ dgp_results ]
+  
 # << ------------------- FUNCTIONAL ANNOTATION: hmmscan, IPS, eggNOG --------------- >>
 # GO SUMMARY
 # PFAM
