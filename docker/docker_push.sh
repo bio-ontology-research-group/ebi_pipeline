@@ -61,3 +61,6 @@ docker push ashrafborg/pipeline-v5.antismash:latest
 
 # IPS
 docker push ashrafborg/pipeline-v5.interproscan:latest
+
+# DNA chunking (perl)
+docker push ashrafborg/pipeline-v5.dna_chunking:latest
