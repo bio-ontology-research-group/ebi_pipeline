@@ -40,6 +40,7 @@ inputs:
 
     # deepgoplus
     deepgoplus_dbdir: Directory
+    deepgoplus_maxcpus: int
 
     # functional annotation
     protein_chunk_size_hmm: int
@@ -200,6 +201,7 @@ steps:
     in:
       check_value: cgc/count_faa
       database: deepgoplus_dbdir
+      maxcpus: deepgoplus_maxcpus
       CGC_results_faa:
         source: cgc/results
         valueFrom: $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop() )

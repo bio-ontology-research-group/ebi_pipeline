@@ -141,6 +141,7 @@ other_ncRNA_models:
 deepgoplus_dbdir: 
   class: Directory
   path: /home/radleyrp/Documents/pipelines/ourpipeline/deepgoplus/data/
+deepgoplus_maxcpus: 16
 
 # Combined gene caller
 #CGC_config:

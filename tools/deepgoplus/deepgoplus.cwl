@@ -7,7 +7,7 @@ $namespaces:
 
 requirements:
   ResourceRequirement:
-    coresMax: 1
+    coresMax: $(inputs.maxcpus)
     ramMin: 4000
   InitialWorkDirRequirement:
     listing:
@@ -19,6 +19,10 @@ hints:
    dockerPull: coolmaksat/deepgoplus
 
 inputs:
+  maxcpus:
+    type: int
+    default: 1
+
   database:
     type: Directory
     inputBinding:

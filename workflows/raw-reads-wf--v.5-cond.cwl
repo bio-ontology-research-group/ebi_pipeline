@@ -41,6 +41,7 @@ inputs:
 
     # deepgoplus
     deepgoplus_dbdir: Directory
+    deepgoplus_maxcpus: int
 
     # functional annotation
     protein_chunk_size_hmm: int
@@ -175,6 +176,7 @@ steps:
       cgc_chunk_size: cgc_chunk_size
       CGC_config: CGC_config
       deepgoplus_dbdir: deepgoplus_dbdir
+      deepgoplus_maxcpus: deepgoplus_maxcpus
       protein_chunk_size_hmm: protein_chunk_size_hmm
       protein_chunk_size_IPS: protein_chunk_size_IPS
       func_ann_names_ips: func_ann_names_ips
