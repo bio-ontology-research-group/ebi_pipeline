@@ -206,7 +206,7 @@ steps:
       ##output_name: $(inputs.CGC_results_faa.basename)_deepgoplus.tsv
       output_name: 
        source: cgc/results
-       valueFrom:  $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop().basename )_deepgoplus.tsv
+       valueFrom:  $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop().nameroot )_deepgoplus.tsv
     out: [ dgp_results ]
   
 # << ------------------- FUNCTIONAL ANNOTATION: hmmscan, IPS, eggNOG --------------- >>
