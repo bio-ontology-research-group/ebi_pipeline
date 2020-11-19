@@ -20,7 +20,7 @@ hints:
 
 inputs:
   maxcpus:
-    type: int
+    type: int?
     default: 1
 
   database:
