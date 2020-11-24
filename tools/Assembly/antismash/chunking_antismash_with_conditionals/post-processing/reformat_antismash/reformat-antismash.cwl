@@ -12,7 +12,7 @@ requirements:
 
 inputs:
   glossary:
-    type: string
+    type: File
     inputBinding:
       position: 1
       prefix: -g

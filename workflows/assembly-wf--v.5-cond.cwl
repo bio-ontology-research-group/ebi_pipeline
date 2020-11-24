@@ -18,13 +18,13 @@ inputs:
  # << rna prediction >>
     ssu_db: {type: File, secondaryFiles: [.mscluster] }
     lsu_db: {type: File, secondaryFiles: [.mscluster] }
-    ssu_tax: string
-    lsu_tax: string
-    ssu_otus: string
-    lsu_otus: string
+    ssu_tax: File
+    lsu_tax: File
+    ssu_otus: File
+    lsu_otus: File
 
-    rfam_models: string[]
-    rfam_model_clans: string
+    rfam_models: File[]
+    rfam_model_clans: File
     other_ncrna_models: string[]
 
     ssu_label: string
@@ -33,7 +33,7 @@ inputs:
     5.8s_pattern: string
 
  # << cgc >>
-    CGC_config: string
+    CGC_config: File?
     CGC_postfixes: string[]
     cgc_chunk_size: int
 
@@ -46,35 +46,36 @@ inputs:
     HMM_gathering_bit_score: boolean
     HMM_omit_alignment: boolean
     HMM_name_database: string
+    HMM_data: Directory 
     hmmsearch_header: string
-    EggNOG_db: string
-    EggNOG_diamond_db: string
-    EggNOG_data_dir: string
+    EggNOG_db: File
+    EggNOG_diamond_db: File
+    EggNOG_data_dir: Directory
     InterProScan_databases: string
     InterProScan_applications: string[]  # ../tools/InterProScan/InterProScan-apps.yaml#apps[]?
     InterProScan_outputFormat: string[]  # ../tools/InterProScan/InterProScan-protein_formats.yaml#protein_formats[]?
     ips_header: string
-    ko_file: string
+    ko_file: File
 
  # << diamond >>
-    Uniref90_db_txt: string
+    Uniref90_db_txt: File
     diamond_maxTargetSeqs: int
-    diamond_databaseFile: string
+    diamond_databaseFile: File
     diamond_header: string
 
  # << GO >>
     go_config: string
 
  # << Pathways >>
-    graphs: string
-    pathways_names: string
-    pathways_classes: string
+    graphs: File
+    pathways_names: File
+    pathways_classes: File
 
  # << genome properties >>
     gp_flatfiles_path: string
 
  # << antismash summary >>
-    clusters_glossary: string
+    clusters_glossary: File
 
 outputs:
   qc-status:                                                 # [1]
@@ -198,6 +199,7 @@ steps:
       HMM_gathering_bit_score: HMM_gathering_bit_score
       HMM_omit_alignment: HMM_omit_alignment
       HMM_name_database: HMM_name_database
+      HMM_dbdir: HMM_data 
       hmmsearch_header: hmmsearch_header
       EggNOG_db: EggNOG_db
       EggNOG_diamond_db: EggNOG_diamond_db

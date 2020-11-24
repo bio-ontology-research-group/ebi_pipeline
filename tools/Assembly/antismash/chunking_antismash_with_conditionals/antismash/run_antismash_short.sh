@@ -12,4 +12,7 @@ if [ -z "$CONDA_ENV" ]; then
     echo "conda enviroment is empty = using docker"
 else
     source ${CONDA_ENV} antismash
+fi 
+
 antismash --genefinding prodigal-m --smcogs --asf --disable-svg --knownclusterblast --outputfolder ${OUTFOLDER} ${INPUT}
+

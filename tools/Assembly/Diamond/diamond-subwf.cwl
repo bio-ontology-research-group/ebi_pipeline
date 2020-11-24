@@ -15,9 +15,9 @@ inputs:
   outputFormat: string
   maxTargetSeqs: int
   strand: string
-  databaseFile: string
+  databaseFile: File
   threads: int
-  Uniref90_db_txt: string
+  Uniref90_db_txt: File
   filename: string
 
 outputs:

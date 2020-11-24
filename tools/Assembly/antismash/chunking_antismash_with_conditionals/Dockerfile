@@ -54,7 +54,7 @@ RUN apt-get install -y \
                          python-pysvg \
                          python-scipy \
                          python-sklearn \
-                         tigr-glimmer
+                         tigr-glimmer 
 RUN pip install "biopython==1.76"
 RUN pip install helperlibs
 
@@ -67,6 +67,14 @@ ENV PATH="/usr/lib/tigr-glimmer:${PATH}"
 
 # install dbs
 RUN download-antismash-databases
+
+## install Diamond
+ENV VERSION=0.9.25
+RUN apt-get install zlib1g-dev
+RUN wget https://github.com/bbuchfink/diamond/archive/v$VERSION.tar.gz && tar -zxvf v$VERSION.tar.gz
+RUN cd diamond-$VERSION && bash build_simple.sh
+
+ENV PATH="/diamond-$VERSION:${PATH}"
 
 
 # pipeline tools

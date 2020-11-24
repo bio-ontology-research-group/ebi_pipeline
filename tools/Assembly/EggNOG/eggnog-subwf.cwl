@@ -9,9 +9,9 @@ requirements:
 
 inputs:
   fasta_file: File[]
-  db_diamond: string
-  db: string
-  data_dir: string
+  db_diamond: File
+  db: File
+  data_dir: Directory
   cpu: int
   file_acc: string
 

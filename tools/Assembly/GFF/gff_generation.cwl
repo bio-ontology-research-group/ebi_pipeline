@@ -43,11 +43,11 @@ outputs:
     type: File
     format: edam:format_2306  # GTF/GFF
     outputBinding:
-      glob: $(inputs.output_name).bgz
+      glob: $(inputs.output_name).gz  ##$(inputs.output_name).bgz  -- the above script outputs .gz NOT .bgz
   output_gff_index:
     type: File
     outputBinding:
-      glob: $(inputs.output_name).bgz.tbi
+      glob: $(inputs.output_name).gz.tbi  ##$(inputs.output_name).bgz.tbi -- the above script output .gz.tbi NOT .bgz
   stdout: stdout
 
 $namespaces:

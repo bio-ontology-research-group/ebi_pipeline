@@ -31,4 +31,4 @@ RUN export PERL5LIB=$PERL5LIB:/genome-properties/code/modules
 
 ENV PATH="/genome-properties/code/scripts/:${PATH}"
 
-CMD ["assign_genome_properties.pl”]
+CMD ["assign_genome_properties.pl"]

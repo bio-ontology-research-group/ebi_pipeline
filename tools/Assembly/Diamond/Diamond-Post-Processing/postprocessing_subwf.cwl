@@ -13,7 +13,7 @@ requirements:
 
 inputs:
   input_diamond: File
-  input_db: string
+  input_db: File
   filename: string
 
 outputs:

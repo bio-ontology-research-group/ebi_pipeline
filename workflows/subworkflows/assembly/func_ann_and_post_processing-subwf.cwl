@@ -16,15 +16,16 @@ inputs:
   rna_prediction_ncRNA: File
 
   protein_chunk_size_eggnog:  int
-  EggNOG_db: string
-  EggNOG_diamond_db: string
-  EggNOG_data_dir: string
+  EggNOG_db: File
+  EggNOG_diamond_db: File
+  EggNOG_data_dir: Directory
 
   protein_chunk_size_hmm: int
   func_ann_names_hmmer: string
   HMM_gathering_bit_score: boolean
   HMM_omit_alignment: boolean
   HMM_name_database: string
+  HMM_dbdir: Directory
   hmmsearch_header: string
 
   protein_chunk_size_IPS: int
@@ -35,17 +36,17 @@ inputs:
   ips_header: string
 
   diamond_maxTargetSeqs: int
-  diamond_databaseFile: string
-  Uniref90_db_txt: string
+  diamond_databaseFile: File
+  Uniref90_db_txt: File
   diamond_header: string
 
-  antismash_geneclusters_txt: File
+  antismash_geneclusters_txt: File?
   go_config: string
 
-  ko_file: string
-  graphs: string
-  pathways_names: string
-  pathways_classes: string
+  ko_file: File
+  graphs: File
+  pathways_names: File
+  pathways_classes: File
 
   gp_flatfiles_path: string
 
@@ -80,6 +81,7 @@ steps:
       HMM_gathering_bit_score: HMM_gathering_bit_score
       HMM_omit_alignment: HMM_omit_alignment
       HMM_database: HMM_name_database
+      HMM_dbdir: HMM_dbdir
       EggNOG_db: EggNOG_db
       EggNOG_diamond_db: EggNOG_diamond_db
       EggNOG_data_dir: EggNOG_data_dir

@@ -25,7 +25,7 @@ inputs:
   ips_header: string
   output_gff_gz: File
   output_gff_index: File
-  ko_file: string
+  ko_file: File
 
 outputs:
   functional_annotation_folder:
