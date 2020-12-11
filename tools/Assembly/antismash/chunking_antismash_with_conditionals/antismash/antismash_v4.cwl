@@ -18,20 +18,23 @@ requirements:
   ResourceRequirement:
     coresMax: 1
     ramMin: 20000
+  ShellCommandRequirement: {}
 
-hints:
-  DockerRequirement:
-    dockerPull:  ashrafborg/pipeline-v5.antismash
+
+##hints:
+##  DockerRequirement:
+##    dockerPull:  ashrafborg/pipeline-v5.antismash
 
 inputs:
 
-  accession: string
+  accession: string 
   chunk_num: string
 
   outdirname:
     type: string
     inputBinding:
       prefix: -o
+      ##valueFrom: $(runtime.tmpdir)/$(inputs.outdirname)
 
   input_fasta:
     format: edam:format_1929  # FASTA
@@ -39,10 +42,10 @@ inputs:
     inputBinding:
       prefix: -i
 
-baseCommand: [ run_antismash_short.sh ]
+baseCommand: [ /home/kibriyam/workpipelines/external_tools/antismash/run_antismash_short.sh ]
 
-stdout: stdout.txt
-stderr: stderr.txt
+##stdout: stdout.txt
+##stderr: stderr.txt
 
 outputs:
 
