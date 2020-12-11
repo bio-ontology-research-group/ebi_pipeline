@@ -10,8 +10,8 @@ requirements:
     ramMin: 200
 
 hints:
-  DockerRequirement:
-    dockerPull: alpine:3.9.4
+  - class: DockerRequirement
+    dockerPull: ashrafborg/pipeline-v5.python3:latest
 
 baseCommand: [antismash_to_gff_nojson.py]
 

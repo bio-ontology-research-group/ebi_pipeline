@@ -10,6 +10,10 @@ requirements:
     coresMax: 1
     ramMin: 200
 
+hints:
+  - class: DockerRequirement
+    dockerPull: ashrafborg/pipeline-v5.python3:latest
+
 inputs:
   glossary:
     type: File
