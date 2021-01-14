@@ -14,7 +14,7 @@ hints:
 requirements:
   ResourceRequirement:
     ramMin: 10000
-    coresMin: 32
+    coresMin: 4  ## can we set this from input?
 
 baseCommand: [emapper.py]
 

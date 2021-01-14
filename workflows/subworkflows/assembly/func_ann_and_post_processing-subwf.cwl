@@ -112,7 +112,7 @@ steps:
       maxTargetSeqs: diamond_maxTargetSeqs
       strand: { default: 'both'}
       databaseFile: diamond_databaseFile
-      threads: { default: 32 }
+      threads: { default: 16 }
       Uniref90_db_txt: Uniref90_db_txt
       filename:
         source: filtered_fasta

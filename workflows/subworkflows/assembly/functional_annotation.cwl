@@ -67,7 +67,7 @@ steps:
       db_diamond: EggNOG_diamond_db
       db: EggNOG_db
       data_dir: EggNOG_data_dir
-      cpu: { default: 16 }
+      cpu: { default: 8 }
       file_acc:
         source: CGC_predicted_proteins
         valueFrom: $(self.nameroot)
