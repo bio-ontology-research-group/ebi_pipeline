@@ -95,9 +95,10 @@ outputs:
   # deepgo_results:
   #   type: File
   #   outputSource: deepgoplus/dgp_results
-  deepgo_results:
-    type: Directory
-    outputSource: move_deepgo_to_folder/out
+  ## pipeline setup with the following directory output, NOT THE FILE ABOVE 
+  #deepgo_results:
+  #  type: Directory
+  #  outputSource: move_deepgo_to_folder/out
    
   rna-count:
     type: File
@@ -195,21 +196,21 @@ steps:
 # << ------------------- DEEP GO PLUS--------------- >>
 # ADDED BY ASHRAF for BORG
 # 
-  deepgoplus:
-    run: ../../../tools/deepgoplus/deepgoplus.cwl
-    when: $(inputs.check_value != 0)
-    in:
-      check_value: cgc/count_faa
-      database: deepgoplus_dbdir
-      maxcpus: deepgoplus_maxcpus
-      CGC_results_faa:
-        source: cgc/results
-        valueFrom: $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop() )
-      ##output_name: $(inputs.CGC_results_faa.basename)_deepgoplus.tsv
-      output_name: 
-       source: cgc/results
-       valueFrom:  $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop().nameroot )_deepgoplus.tsv
-    out: [ dgp_results ]
+#  deepgoplus:
+#    run: ../../../tools/deepgoplus/deepgoplus.cwl
+#    when: $(inputs.check_value != 0)
+#    in:
+#      check_value: cgc/count_faa
+#      database: deepgoplus_dbdir
+#      maxcpus: deepgoplus_maxcpus
+#      CGC_results_faa:
+#        source: cgc/results
+#        valueFrom: $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop() )
+#      ##output_name: $(inputs.CGC_results_faa.basename)_deepgoplus.tsv
+#      output_name: 
+#       source: cgc/results
+#       valueFrom:  $( self.filter(file => !!file.basename.match(/^.*.faa.*$/)).pop().nameroot )_deepgoplus.tsv
+#    out: [ dgp_results ]
   
 # << ------------------- FUNCTIONAL ANNOTATION: hmmscan, IPS, eggNOG --------------- >>
 # GO SUMMARY
@@ -309,15 +310,15 @@ steps:
       dir_name: { default: 'protein_fasta_chunks' }
     out: [ out ]
 
-  move_deepgo_to_folder:
-    run: ../../../utils/return_directory.cwl
-    in:
-      file_list:
-        source:
-          - deepgoplus/dgp_results
-        linkMerge: merge_flattened
-      dir_name: { default: 'deepgoplus_results' }
-    out: [ out ]
+#  move_deepgo_to_folder:
+#    run: ../../../utils/return_directory.cwl
+#    in:
+#      file_list:
+#        source:
+#          - deepgoplus/dgp_results
+#        linkMerge: merge_flattened
+#      dir_name: { default: 'deepgoplus_results' }
+#    out: [ out ]
   ## Above added by ASHRAF 
 
 

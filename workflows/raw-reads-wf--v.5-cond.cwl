@@ -116,9 +116,9 @@ outputs:
     type: Directory?
     outputSource: after-qc/chunking_proteins
 
-  deepgoplus_results:
-    type: Directory?
-    outputSource: after-qc/deepgo_results
+  #deepgoplus_results:
+  #  type: Directory?
+  #  outputSource: after-qc/deepgo_results
 
   completed_flag_file:
     type: File?
@@ -205,7 +205,7 @@ steps:
       - stats
       - chunking_nucleotides
       - chunking_proteins
-      - deepgo_results
+      ##- deepgo_results
       - count_CDS
       - optional_tax_file_flag
 
